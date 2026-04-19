@@ -8,6 +8,14 @@ class PrinterI(Demo.Printer):
     def printString(self, s, current=None):
         print(self.t, s)
         return s + "*"
+    
+    def somar(self, a, b, current=None):
+        print(self.t, f"Somando {a} + {b}")
+        return a + b
+
+    def inverter(self, s, current=None):
+        print(self.t, f"Invertendo {s}")
+        return s[::-1]
 
 communicator = Ice.initialize(sys.argv) 
 
